@@ -1,0 +1,6 @@
+framework module TUIRoomEngine_Mac {
+  umbrella header "TUIEngine.h"
+
+  export *
+  module * { export * }
+}

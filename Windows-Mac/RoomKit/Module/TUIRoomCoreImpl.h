@@ -6,9 +6,9 @@
 
 #include "ITRTCCloud.h"
 
-#include "TUIRoomEngine.h"
-#include "TUIRoomDefine.h"
-#include "TUIRoomObserver.h"
+#include "ITUIRoomEngine.h"
+#include "ITUIRoomDefine.h"
+#include "ITUIRoomObserver.h"
 
 #include "CommonDef.h"
 #include <unordered_map>

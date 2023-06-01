@@ -12,8 +12,6 @@
 #include "ScreenShareManager.h"
 #include "log.h"
 
-#include "json.h"
-
 #define TIMEOUT 15
 #define MAX_SEAT_COUNT 0
 
@@ -135,8 +133,12 @@ int TUIRoomCoreImpl::Logout() {
     return 0;
 }
 const char* TUIRoomCoreImpl::GetSDKVersion() {
+#ifdef _WIN32
     sdk_version_ = TOSTRING(getLiteAvSDKVersion());
     return sdk_version_.c_str();
+#else
+    return "";
+#endif
 }
 int TUIRoomCoreImpl::CreateRoom(const std::string& room_id, tuikit::TUISpeechMode speech_mode) {
     // 创建房间者为房主角色
